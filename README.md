@@ -15,22 +15,21 @@ Points to note:
 4. Maximum string size is assumed to be 100 characters.
    
    
-#Steps to run(each in separate terminal):#
-From one server file, make various copies while compiling.
-Silimar is true for the client.
+Steps to run(each in separate terminal):
+From server file and client file, make various copies while compiling.
 
 1. Compile and run all the servers as : 
-    gcc server.c -lpthread -o ser<server#>
-    ./ser<server#>
+    `gcc server.c -lpthread -o ser<server#>`
+    `./ser<server#>`
     
    Run all the servers on different ports preferably from 6001 onwards.
     
 2. Compile and run the loadbalancer as :
-    gcc loadbalancer.c -lpthread -o lb
-    ./lb
+    `gcc loadbalancer.c -lpthread -o lb`
+    `./lb`
     
 3. Compile and run all the clients as : 
-    gcc client.c -lpthread -o cli<client#>
-    ./cli<client#>
+    `gcc client.c -lpthread -o cli<client#>`
+    `./cli<client#>`
     
 Note: Since loadbalancer and server are multithreaded, it is not required to re-run them again and again.
