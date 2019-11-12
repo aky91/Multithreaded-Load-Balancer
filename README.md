@@ -23,6 +23,8 @@ Silimar is true for the client.
     gcc server.c -lpthread -o ser<server#>
     ./ser<server#>
     
+   Run all the servers on different ports preferably from 6001 onwards.
+    
 2. Compile and run the loadbalancer as :
     gcc loadbalancer.c -lpthread -o lb
     ./lb
