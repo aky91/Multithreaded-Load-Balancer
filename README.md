@@ -31,7 +31,7 @@ From server file and client file, make various copies while compiling.
     
 3. Compile and run all the clients :  
     `gcc client.c -lpthread -o cli  
-    `./cli
+    `./cli`
     
 Note: Since loadbalancer and server are multithreaded, it is not required to re-run them again and again.  
 
