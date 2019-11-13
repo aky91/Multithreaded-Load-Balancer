@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 	/* Get server host from server name. */
 	server_host = gethostbyname(server_name);
 
-	/* Initialise IPv4 server address with server host. */
+	/* Initialize IPv4 server address with server host. */
 	memset(&server_address, 0, sizeof server_address);
 	server_address.sin_family = AF_INET;
 	server_address.sin_port = htons(server_port);
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 
 	/* Connect to socket with server address. */
 	if (connect(socket_fd, (struct sockaddr *)&server_address, sizeof server_address) == -1) {
-	perror("connect");
+		perror("connect");
 		exit(1);
 	}
 
