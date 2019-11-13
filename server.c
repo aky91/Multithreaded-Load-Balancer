@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 		scanf("%d", &port);
 	}
 
-	/* Initialise IPv4 address. */
+	/* Initialize IPv4 address. */
 	memset(&address, 0, sizeof address);
 	address.sin_family = AF_INET;
 	address.sin_port = htons(port);
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
 		exit(1);
 	}
 
-	/* Initialise pthread attribute to create detached threads. */
+	/* Initialize pthread attribute to create detached threads. */
 	if (pthread_attr_init(&pthread_attr) != 0) {
 		perror("pthread_attr_init");
 		exit(1);
@@ -112,9 +112,9 @@ int main(int argc, char *argv[]) {
 			continue;
 		}
 
-		/* Initialise pthread argument. */
+		/* Initialize pthread argument. */
 		pthread_arg->new_socket_fd = new_socket_fd;
-		/* TODO: Initialise arguments passed to threads here. See lines 22 and
+		/* TODO: Initialize arguments passed to threads here. See lines 22 and
 		 * 139.
 		 */
 
@@ -150,7 +150,7 @@ void upper_string(char s[]) {
 }
 
 void *pthread_routine(void *arg) {
-	/*initilize*/
+	/*initialize*/
 	clientNumber++;
 	int clientIdx = clientNumber;
 	numberOfConnections++;
