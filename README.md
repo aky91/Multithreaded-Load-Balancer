@@ -19,18 +19,22 @@ Look at the following image explaining the flow of data.
 #### Steps to run(each in separate terminal):  
 From server file and client file, make various copies while compiling.
 
-1. Compile and run all the servers as :  
-    `gcc server.c -lpthread -o ser<server#>`  
-    `./ser<server#>`
+1. Compile and run all the servers :  
+    `gcc server.c -lpthread -o ser`  
+    `./ser`
     
    Run all the servers on different ports preferably from 6001 onwards.
     
-2. Compile and run the loadbalancer as :  
+2. Compile and run the loadbalancer server :  
     `gcc loadbalancer.c -lpthread -o lb`  
     `./lb`
     
-3. Compile and run all the clients as :  
-    `gcc client.c -lpthread -o cli<client#>`  
-    `./cli<client#>`
+3. Compile and run all the clients :  
+    `gcc client.c -lpthread -o cli  
+    `./cli
     
-Note: Since loadbalancer and server are multithreaded, it is not required to re-run them again and again.
+Note: Since loadbalancer and server are multithreaded, it is not required to re-run them again and again.  
+
+Here is a screenshot of the code running with 4 clients and 2 servers.  
+
+![screenshot](https://user-images.githubusercontent.com/26066500/68779941-7ef50980-065b-11ea-8af7-7d92bb7be20a.png)
